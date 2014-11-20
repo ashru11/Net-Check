@@ -12,14 +12,12 @@ import org.apache.commons.net.ntp.TimeInfo;
 import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
-import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
 public class CheckService extends IntentService {
 
-	private float lastCheckTime;
 	Calendar calendar = Calendar.getInstance();
 
 	private static final long CHECK_INTERVAL = 5000;
@@ -34,7 +32,7 @@ public class CheckService extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent workIntent) {
 		// Gets data from the incoming Intent
-		String dataString = workIntent.getDataString();
+		//String dataString = workIntent.getDataString();
 		// Do work here, based on the contents of dataString
 		while (true) {
 			try {
